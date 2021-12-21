@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>NGEN</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<h1>Generating nitro...</h1>
+	<div id="text"></div>
+	<script>
+    function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   return result;
+}
+
+console.log(makeid(5));
+		var text = document.getElementById('text');
+var greeting = ['Creating space on server...',
+                'Starting free nitro generator...',
+                'Starting spaceNR9048509438509385...',
+                'Attempting free nitro generation...',
+                'err: in: line: 23489320 file: NG...',
+                'err: in: line: 54654665 file: NG...',
+                'err: in: line: 63565477 file: NG...',
+                'LOADING NGEN...',
+                'INFO: NGEN STARTED',
+                'INFO: NGEN 1%',
+                'INFO: NGEN 15%',
+                'INFO: NGEN 40%',
+                'INFO: NGEN 99%',
+                'INFO: FINALIZING...',
+                'INFO: NGEN EIXT',
+                'Generated free nitro code: http://discord.gift/' + makeid(30)]
+text.innerHTML = '<i>▮</i>';
+
+(function greet() {
+    //if (greeting.length > 0 && greeting.length < 4) {
+    //}
+    var line = greeting.shift();
+    if (!line) {
+        return;
+    }
+    line = line.split('');
+    (function type() {
+        var character = line.shift();
+        if (!character) {
+            text.insertBefore(document.createElement('br'), text.lastChild);
+            return setTimeout(greet, 2500);
+        }
+
+        text.insertBefore(document.createTextNode(character), text.lastChild);
+        setTimeout(type, 1);
+    }());
+}());
+
+	</script>
+	<style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Patrick+Hand&display=swap');
+		body {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 20px;
+			background-color: #363940;
+			color: #ffffff;
+		}
+    #text {
+      padding: 15px;
+      background-color: #1D2025;
+      border-radius: 5px;
+      height: 500px;
+    }
+
+		i {
+			font-style: unset;
+			font-size: 1em;
+			animation: blink 1100ms linear infinite;
+		}
+
+		@keyframes blink {
+			49% {
+				opacity: 1;
+			}
+			50% {
+				opacity: 0;
+			}
+			89% {
+				opacity: 0;
+			}
+			90% {
+				opacity: 1;
+			}
+		}
+	</style>
+</body>
+
+</html>
